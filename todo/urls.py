@@ -10,6 +10,6 @@ urlpatterns = [
     path('todos/<int:pk>/complete/', TodoCompleteView.as_view(), name='todo-complete'),
     path('todos/<int:pk>/delete/', TodoDeleteView.as_view(), name='todo-delete'),
 	path('', todo_list, name='todo-list'),
-	path('complete/<int:pk>/', todo_complete, name='todo-completes'),
-    path('delete/<int:pk>/', todo_delete, name='todo-deletes'),
+	path('complete/<int:pk>/', todo_complete, name='todo-complete'),
+    path('delete/<int:pk>/', todo_delete, name='todo-delete'),
 ]

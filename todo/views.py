@@ -51,13 +51,13 @@ def todo_list(request):
     todos = Todo.objects.all()
     return render(request, 'todo_list.html', {'todos': todos})
 
-def todo_completes(request, pk):
+def todo_complete(request, pk):
     todo = Todo.objects.get(pk=pk)
     todo.is_completed = True
     todo.save()
     return redirect('todo-list')
 
-def todo_deletes(request, pk):
+def todo_delete(request, pk):
     todo = Todo.objects.get(pk=pk)
     todo.delete()
     return redirect('todo-list')
