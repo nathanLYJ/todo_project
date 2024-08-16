@@ -19,8 +19,8 @@
             {{ todo.title }}
             {% if not todo.is_completed %}
             <span>
-                <a href="{% url 'todo-complete' todo.pk %}" class="btn btn-success btn-sm">Complete</a>
-                <a href="{% url 'todo-delete' todo.pk %}" class="btn btn-danger btn-sm">Delete</a>
+                <a href="{% url 'todo-completes' todo.pk %}" class="btn btn-success btn-sm">Complete</a>
+                <a href="{% url 'todo-deletes' todo.pk %}" class="btn btn-danger btn-sm">Delete</a>
             </span>
             {% else %}
             <span class="badge badge-success">Completed</span>
